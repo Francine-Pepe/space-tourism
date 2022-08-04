@@ -1,0 +1,37 @@
+.main_home {
+  height: 100vh;
+  z-index: -1;
+  background-image: url("../../Images/home/background-home-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Tablet */
+
+@media only screen and (max-width: 768px) {
+    .main_home {
+        height: 100vh;
+        z-index: -1;
+        background-image: url("../../Images/home/background-home-tablet.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 375px) {
+  .main_home {
+      height: 100vh;
+      z-index: -1;
+      background-image: url("../../Images/home/background-home-mobile.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+}
