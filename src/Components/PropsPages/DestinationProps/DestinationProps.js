@@ -28,11 +28,11 @@ function DestinationProps(props) {
           </p>
         </div>
         <div className={styles.bottom_container_planets}>
-          <div>
+          <div className={styles.distance}>
             <h6>Avg. distance</h6>
             <h5>384,400 km</h5>
           </div>
-          <div>
+          <div className={styles.time}>
             <h6>Est. travel time</h6>
             <h5>3 days</h5>
           </div>

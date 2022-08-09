@@ -1,10 +1,14 @@
-.nav_container {
+.nav_container,
+.nav_container_planets {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
-  height: 6rem;
+}
+
+.nav_container {
   position: absolute;
+  height: 6rem;
   margin-top: 2.5rem;
 }
 
@@ -26,7 +30,7 @@
 }
 
 .nav_container hr {
-  width: 29.563rem;
+  max-width: 29.563rem;
   border: 0.031rem solid #979797;
   z-index: 2;
   margin-left: 13rem;
@@ -41,7 +45,6 @@
   gap: 48px;
   font-size: 1.2em;
   text-transform: uppercase;
-
   z-index: 1;
   position: relative;
 }
@@ -49,7 +52,8 @@
 .nav_link {
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
-  width: 51.875rem;
+  width: 60%;
+  padding: 0 7.688rem;
 }
 
 .nav_link li,
@@ -113,13 +117,12 @@ a {
   }
 }
 
-@media only screen and (max-width: 921px) { 
-  .list_container_planets ul{
+@media only screen and (max-width: 921px) {
+  .list_container_planets ul {
     justify-content: center;
     align-items: center;
     display: flex;
   }
-  
 }
 
 /* Tablet */
@@ -136,27 +139,32 @@ a {
   .nav_link,
   .nav_link_planets {
     gap: 48px;
-
     width: 28.125rem;
   }
 
   .nav_container {
     margin-top: 0;
   }
+
+  .nav_link {
+    width: 28.128rem;
+    padding: 0 3rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+  }
 }
 
 /* Mobile */
 
 @media only screen and (max-width: 600px) {
-  .nav_link,
-  .nav_link_planets {
+  .nav_link {
     display: none;
   }
 
   .nav_link,
   .nav_link_planets {
     width: 100%;
-    max-height: 0;
+    /* height: 40rem; */
     overflow: hidden;
   }
 
@@ -174,8 +182,7 @@ a {
     color: #fff;
   }
 
-  .nav_link,
-  .nav_link_planets {
+  .nav_link {
     flex-direction: column;
     align-items: center;
     padding: 20px;
@@ -184,5 +191,15 @@ a {
     display: inline-flex;
     align-items: center;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .nav_link_planets li {
+    font-size: 0.875rem;
+  }
+
+  .nav_link_planets {
+    gap: 1.625rem;
   }
 }
