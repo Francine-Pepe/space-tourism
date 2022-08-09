@@ -1,8 +1,11 @@
 import React from 'react'
+import DestinationProps from '../PropsPages/DestinationProps/DestinationProps'
 
-const Destination = () => {
+const Destination = (props) => {
   return (
-    <div>Destination</div>
+    <div>
+      <DestinationProps />
+    </div>
   )
 }
 
