@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Logo from "../../Images/shared/logo.svg";
@@ -29,6 +29,14 @@ const Navbar = () => {
     },
   ];
 
+  const [isActive, setIsActive] = useState(false);
+  
+  const handleClick = () => {
+    setIsActive((current) => !current);
+  };
+
+  
+
   return (
     <>
       <nav className={styles.nav_container}>
@@ -41,9 +49,18 @@ const Navbar = () => {
 
         <hr />
         <ul className={styles.nav_link}>
-          {navLinks.map((navLinks) => (
-            <li className={styles.list_container}>
-              <NavLink to={navLinks.link} className={styles.active}>
+          {navLinks.map((navLinks, index) => (
+            <li className={styles.list_container} key={index}
+            style={{
+              borderBottomColor: isActive ? "white" : "",
+            }}
+            onClick={handleClick}
+            >
+              <NavLink
+                to={navLinks.link}
+                className={styles.active}
+                
+              >
                 <span>{navLinks.number}</span> {navLinks.name}
               </NavLink>
             </li>

@@ -37,4 +37,8 @@
   .open_button img {
     display: none;
   }
+
+  .dropdown_menu {
+    display: none;
+  }
 }
