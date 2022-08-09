@@ -32,7 +32,7 @@ const NavbarPlanets = () => {
 
   return (
     <>
-      <nav className={styles.nav_container}>
+      <nav className={styles.nav_container_planets}>
         <ul className={styles.nav_link_planets}>
           {navLinks.map((navLinks, index) => (
             <li
